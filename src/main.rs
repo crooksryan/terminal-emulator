@@ -3,9 +3,6 @@ use nix::unistd::{ForkResult, read};
 use std::os::unix::io::RawFd;
 use std::process::Command;
 
-// need to open ui
-// create pty connection
-// read from it?
 
 fn read_from_fd(fd: RawFd) -> Option<Vec<u8>> {
     // create read buffer to read from stdin
@@ -39,6 +36,9 @@ fn spawn_pty_with_shell(default_shell: String) -> RawFd {
 }
 
 fn main() {
+    // need to open ui
+    // create pty connection
+    // read from it?
     let default_shell = std::env::var("SHELL")
         .expect("could not find shell from $SHELL");
     let stdout_fd = spawn_pty_with_shell(default_shell);

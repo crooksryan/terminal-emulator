@@ -9,5 +9,5 @@ members = ["ui", "raw-mode"]
 
 [dependencies]
 nix = "0.17.0"
-ui = { path = "./ui" }
 raw-mode = { path = "./raw-mode" }
+ui = { path = "./ui" }
