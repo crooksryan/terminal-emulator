@@ -43,11 +43,24 @@ dependencies = [
 ]
 
 [[package]]
-name = "term-emul"
+name = "raw-mode"
 version = "0.1.0"
 dependencies = [
  "nix",
 ]
+
+[[package]]
+name = "term-emul"
+version = "0.1.0"
+dependencies = [
+ "nix",
+ "raw-mode",
+ "ui",
+]
+
+[[package]]
+name = "ui"
+version = "0.1.0"
 
 [[package]]
 name = "void"

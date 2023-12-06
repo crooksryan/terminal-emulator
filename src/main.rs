@@ -3,6 +3,10 @@ use nix::unistd::{ForkResult, read};
 use std::os::unix::io::RawFd;
 use std::process::Command;
 
+// need to open ui
+// create pty connection
+// read from it?
+
 fn read_from_fd(fd: RawFd) -> Option<Vec<u8>> {
     // create read buffer to read from stdin
     // and return result
