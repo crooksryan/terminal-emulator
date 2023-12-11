@@ -6,7 +6,6 @@ use std::process::Command;
 
 fn read_from_fd(fd: RawFd) -> Option<Vec<u8>> {
     // create read buffer to read from stdin
-    // and return result
     let mut read_buffer = [0; 65536];
     let read_result = read(fd, &mut read_buffer);
     match read_result {
